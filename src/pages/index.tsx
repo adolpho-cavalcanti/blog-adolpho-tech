@@ -1,14 +1,10 @@
-// interface HomeProps {
-//   count: number;
-// }
 import Image from 'next/image';
 import AppPreview from '../assets/app-nlw-copa-preview.png';
+import iconCheck from '../assets/icon-check.svg';
 import logo from '../assets/logo.svg';
 import usersAvatarExample from '../assets/users-avatar-example.png';
-import iconCheck from '../assets/icon-check.svg';
 
 export default function Home() {
-
   return (
     <div className="max-w-[1124px] h-screen mt-2 mx-auto grid grid-cols-2 items-center gap-28">
       <main>
@@ -21,16 +17,16 @@ export default function Home() {
         <div className="mt-6 flex items-center gap-2">
           <Image src={usersAvatarExample} alt="" />
           <strong className="text-gray-100 text-xl">
-            <span className="text-green-500">+12.532</span> pessoas estão usando
+            <span className="text-green-500">+ 2</span> pessoas estão usando
           </strong>
         </div>
 
         <form className="mt-6 flex gap-2">
           <input 
-            className="flex-1 px-6 py-4 rounded bg-gray-800 border border-gray-600 text-sm"
+            className="flex-1 px-6 py-4 rounded bg-gray-800 border border-gray-600 text-sm text-white"
             type="text" 
             required 
-            placeholder="Qual o nome do seu bolão" 
+            placeholder="Qual o nome do seu bolão"
           />
           <button 
             className="bg-yellow-500 px-6 py-4 rounded text-gray-900 font-bold text-sm uppercase hover:bg-yellow-700"
@@ -47,7 +43,7 @@ export default function Home() {
           <div className="flex items-center gap-6">
             <Image src={iconCheck} alt="" />
             <div className="flex flex-col">
-              <span className="font-bold text-2xl">+2.300</span>
+              <span className="font-bold text-2xl">+ 5</span>
               <span>Bolões criados</span>
             </div>
           </div>
@@ -57,7 +53,7 @@ export default function Home() {
           <div className="flex items-center gap-6">
             <Image src={iconCheck} alt="" />
             <div className="flex flex-col">
-              <span className="font-bold text-2xl">+2.300</span>
+              <span className="font-bold text-2xl">+ 7</span>
               <span>Palpites enviados</span>
             </div>
           </div>
@@ -69,14 +65,13 @@ export default function Home() {
   )
 }
 
-// export const getServerSideProps = async () => {
-//   const response = await fetch('http://localhost:3333/pools/count');
-//   const data = await response.json();
-//   console.log(data, 'data');
+export const getServerSideProps = async () => {
 
-//   return {
-//     props: {
-//       count: data.countPools,
-//     }
-//   }
-// }
+  
+
+  return {
+    props: {
+      
+    }
+  }
+}
