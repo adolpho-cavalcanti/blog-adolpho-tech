@@ -61,7 +61,7 @@ export default function Home() {
         <form onSubmit={subscribe} className="mt-6 flex gap-2">
           <input 
             className="flex-1 px-6 py-4 rounded bg-gray-800 border border-gray-600 text-sm text-white"
-            type="text" 
+            type="email" 
             required 
             placeholder="Informe o seu E-mail"
             value={email}
