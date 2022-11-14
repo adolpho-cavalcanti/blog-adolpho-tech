@@ -33,8 +33,19 @@ export default function Home() {
   }
 
   return (
-    <div className="max-w-[1124px] h-screen mt-2 mx-auto grid grid-cols-2 items-center gap-28">
-      <main>
+    <div className="max-w-[1124px] h-screen mt-2 mx-auto flex max-md:flex-col items-center gap-28">
+
+      <nav className="mb-4 max-md:mx-4 flex flex-col items-center">
+        <header className="w-full flex py-6 gap-2 items-center justify-center">
+          <a className="text-white px-4 py-2 border-solid border-blue-300 border-2 hover:bg-blue-300 hover:text-gray-900 rounded" href="#home">Home</a>
+          <a className="text-white px-4 py-2 border-solid border-blue-300 border-2 hover:bg-blue-300 hover:text-gray-900 rounded" href="#news">Blog</a>
+          <a className="text-white px-4 py-2 border-solid border-blue-300 border-2 hover:bg-blue-300 hover:text-gray-900 rounded" href="#contact">Contato</a>
+          <a className="text-white px-4 py-2 border-solid border-blue-300 border-2 hover:bg-blue-300 hover:text-gray-900 rounded" href="#about">Projetos</a>
+        </header>
+        <Image src={perfilAdolpho} alt="Foto de Perfil do Adolpho Cavalcanti" className="shadow-2xl shadow-gray-600" />
+      </nav>
+
+      <main className="max-md:mx-4">
         <Image src={logo} alt="Logo do site Adolpho Cavalcanti" />
         
         <h1 className="mt-10 text-white text-2xl font-bold leading-tight">
@@ -86,7 +97,7 @@ export default function Home() {
           </div>
         )}
 
-        <div className="mt-6 pt-10 border-t border-gray-600 flex items-center justify-between text-gray-100">
+        <div className="mt-6 mb-16 pt-10 border-t border-gray-600 flex items-center justify-between text-gray-100">
           <div className="flex items-center gap-6">
             <Image src={iconCheck} alt="" />
             <div className="flex flex-col">
@@ -96,15 +107,6 @@ export default function Home() {
         </div>
 
       </main>
-      <aside className="mb-4 flex flex-col items-center justify-center">
-        <header className="flex py-6 gap-6 items-center justify-start">
-          <a className="text-white px-4 py-2 border-solid border-blue-300 border-2 hover:bg-blue-300 hover:text-gray-900 rounded" href="#home">Home</a>
-          <a className="text-white px-4 py-2 border-solid border-blue-300 border-2 hover:bg-blue-300 hover:text-gray-900 rounded" href="#news">Blog</a>
-          <a className="text-white px-4 py-2 border-solid border-blue-300 border-2 hover:bg-blue-300 hover:text-gray-900 rounded" href="#contact">Contato</a>
-          <a className="text-white px-4 py-2 border-solid border-blue-300 border-2 hover:bg-blue-300 hover:text-gray-900 rounded" href="#about">Projetos</a>
-        </header>
-        <Image src={perfilAdolpho} alt="Foto de Perfil do Adolpho Cavalcanti" className="shadow-2xl shadow-gray-600" />
-      </aside>
     </div>
   )
 }
