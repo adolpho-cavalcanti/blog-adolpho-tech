@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import iconCheck from '../assets/icon-check.svg';
 import logo from '../assets/logo-adolpho.png';
@@ -33,12 +34,12 @@ export default function Home() {
   }
 
   return (
-    <div className="max-w-[1124px] h-screen mt-2 mx-auto flex max-md:flex-col items-center gap-28">
+    <div className="max-w-[1124px] mt-2 mx-auto flex max-md:flex-col items-center">
 
       <nav className="mb-4 max-md:mx-4 flex flex-col items-center">
         <header className="w-full flex py-6 gap-2 items-center justify-center">
-          <a className="text-white px-4 py-2 border-solid border-blue-300 border-2 hover:bg-blue-300 hover:text-gray-900 rounded" href="#home">Home</a>
-          <a className="text-white px-4 py-2 border-solid border-blue-300 border-2 hover:bg-blue-300 hover:text-gray-900 rounded" href="#news">Blog</a>
+          <Link className="text-white px-4 py-2 border-solid border-blue-300 border-2 hover:bg-blue-300 hover:text-gray-900 rounded" href="/">Home</Link>
+          <Link className="text-white px-4 py-2 border-solid border-blue-300 border-2 hover:bg-blue-300 hover:text-gray-900 rounded" href="/blog">Blog</Link>
           <a className="text-white px-4 py-2 border-solid border-blue-300 border-2 hover:bg-blue-300 hover:text-gray-900 rounded" href="#contact">Contato</a>
           <a className="text-white px-4 py-2 border-solid border-blue-300 border-2 hover:bg-blue-300 hover:text-gray-900 rounded" href="#about">Projetos</a>
         </header>
